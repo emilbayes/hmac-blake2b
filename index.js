@@ -27,7 +27,7 @@ module.exports = function hmac (out, data, key) {
     OuterKeyPad[i] = 0x5c ^ HMACKey[i]
     InnerKeyPad[i] = 0x32 ^ HMACKey[i]
   }
-  sodium.sodium_memzero(0)
+  sodium.sodium_memzero(HMACKey)
 
   sodium.crypto_generichash_batch(out, [InnerKeyPad].concat(data))
   sodium.sodium_memzero(InnerKeyPad)
