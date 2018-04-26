@@ -25,7 +25,7 @@ module.exports = function hmac (out, data, key) {
 
   for (var i = 0; i < HMACKey.byteLength; i++) {
     OuterKeyPad[i] = 0x5c ^ HMACKey[i]
-    InnerKeyPad[i] = 0x32 ^ HMACKey[i]
+    InnerKeyPad[i] = 0x36 ^ HMACKey[i]
   }
   sodium.sodium_memzero(HMACKey)
 
