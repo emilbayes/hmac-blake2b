@@ -19,8 +19,8 @@ module.exports = function hmac (out, data, key) {
     sodium.sodium_memzero(HMACKey.subarray(HASHLEN))
   } else {
     // Covers key <= BLOCKLEN
-    HMACKey.set(key, HMACKey.byteLength - key.byteLength)
-    sodium.sodium_memzero(HMACKey.subarray(HMACKey.byteLength - key.byteLength))
+    HMACKey.set(key)
+    sodium.sodium_memzero(HMACKey.subarray(key.byteLength))
   }
 
   for (var i = 0; i < HMACKey.byteLength; i++) {
