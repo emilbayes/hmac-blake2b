@@ -10,7 +10,7 @@ test('hmac 1', function (assert) {
 
   hmac(mac, data, key)
 
-  var expected = Buffer.from('358a6a184924894fc34bee5680eedf57d84a37bb38832f288e3b27dc63a98cc8c91e76da476b508bc6b2d408a248857452906e4a20b48c6b4b55d2df0fe1dd24', 'hex')
+  var expected = Buffer.from('87aa7cdea5ef619d4ff0b4241a1d6cb02379f4e2ce4ec2787ad0b30545e17cdedaa833b7d6b8a702038b274eaea3f4e4be9d914eeb61f1702e696c203a126854', 'hex')
   assert.ok(expected.equals(mac))
   assert.end()
 })
@@ -23,7 +23,7 @@ test('hmac 2', function (assert) {
 
   hmac(mac, data, key)
 
-  var expected = Buffer.from('6ff884f8ddc2a6586b3c98a4cd6ebdf14ec10204b6710073eb5865ade37a2643b8807c1335d107ecdb9ffeaeb6828c4625ba172c66379efcd222c2de11727ab4', 'hex')
+  var expected = Buffer.from('164b7a7bfcf819e2e395fbe73b56e0a387bd64222e831fd610270cd7ea2505549758bf75c05a994a6d034f65f8f0e6fdcaeab1a34d4a6b4b636e070a38bce737', 'hex')
   assert.ok(expected.equals(mac))
   assert.end()
 })
@@ -36,7 +36,7 @@ test('hmac 3', function (assert) {
 
   hmac(mac, data, key)
 
-  var expected = Buffer.from('f43bc62c7a99353c3b2c60e8ef24fbbd42e9547866dc9c5be4edc6f4a7d4bc0ac620c2c60034d040f0dbaf86f9e9cd7891a095595eed55e2a996215f0c15c018', 'hex')
+  var expected = Buffer.from('fa73b0089d56a284efb0f0756c890be9b1b5dbdd8ee81a3655f83e33b2279d39bf3e848279a722c806b485a47e67c807b946a337bee8942674278859e13292fb', 'hex')
   assert.ok(expected.equals(mac))
   assert.end()
 })
@@ -49,7 +49,7 @@ test('hmac 4', function (assert) {
 
   hmac(mac, data, key)
 
-  var expected = Buffer.from('e5dbb6de2fee42a1caa06e4e7b84ce408ffa5c4a9de2632eca769cde8875014c72d0720feaf53f76e6a180357f528d7bf484fa3a14e8cc1f0f3bada717b43491', 'hex')
+  var expected = Buffer.from('b0ba465637458c6990e5a8c5f61d4af7e576d97ff94b872de76f8050361ee3dba91ca5c11aa25eb4d679275cc5788063a5f19741120c4f2de2adebeb10a298dd', 'hex')
   assert.ok(expected.equals(mac))
   assert.end()
 })
@@ -62,7 +62,7 @@ test('hmac 5', function (assert) {
 
   hmac(mac, data, key)
 
-  var expected = Buffer.from('7d03e0d2ad83656e5ace6aa9ddf6407a', 'hex')
+  var expected = Buffer.from('415fad6271580a531d4179bc891d87a6', 'hex')
   assert.ok(expected.equals(mac.slice(0, 128 / 8)))
   assert.end()
 })
@@ -75,7 +75,7 @@ test('hmac 6', function (assert) {
 
   hmac(mac, data, key)
 
-  var expected = Buffer.from('a54b2943b2a20227d41ca46c0945af09bc1faefb2f49894c23aebc557fb79c4889dca74408dc865086667aedee4a3185c53a49c80b814c4c5813ea0c8b38a8f8', 'hex')
+  var expected = Buffer.from('80b24263c7c1a3ebb71493c1dd7be8b49b46d1f41b4aeec1121b013783f8f3526b56d037e05f2598bd0fd2215d6a1e5295e64f73f63f0aec8b915a985d786598', 'hex')
   assert.ok(expected.equals(mac))
   assert.end()
 })
@@ -89,7 +89,7 @@ test('hmac 7', function (assert) {
 
   hmac(mac, data, key)
 
-  var expected = Buffer.from('ab347980a64b5e825dd10e7d32fd43a01a8e6dea267ab9ad7d913524526618925311afbcb0c49519cbebdd709540a8d725fb911ac2aee9b2a3aa43d796123393', 'hex')
+  var expected = Buffer.from('e37b6a775dc87dbaa4dfa9f96e5e3ffddebd71f8867289865df5a32d20cdc944b6022cac3c4982b10d5eeb55c3e4de15134676fb6de0446065c97440fa8c6a58', 'hex')
   assert.ok(expected.equals(mac))
   assert.end()
 })
