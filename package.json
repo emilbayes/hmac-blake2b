@@ -1,6 +1,6 @@
 {
   "name": "hmac-blake2b",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "HMAC backed by BLAKE2b",
   "main": "index.js",
   "dependencies": {
