@@ -1,11 +1,12 @@
-var sodium = require('sodium-universal')
+var sodium = require('sodium-native')
 var assert = require('nanoassert')
 
 var HASHLEN = 64
 var BLOCKLEN = 128
-var HMACKey = sodium.sodium_malloc(BLOCKLEN)
-var OuterKeyPad = sodium.sodium_malloc(BLOCKLEN)
-var InnerKeyPad = sodium.sodium_malloc(BLOCKLEN)
+var scratch = sodium.sodium_malloc(BLOCKLEN * 3)
+var HMACKey = scratch.subarray(BLOCKLEN * 0, BLOCKLEN * 1)
+var OuterKeyPad = scratch.subarray(BLOCKLEN * 1, BLOCKLEN * 2)
+var InnerKeyPad = scratch.subarray(BLOCKLEN * 2, BLOCKLEN * 3)
 
 // Post-fill is done in the cases where someone caught an exception that
 // happened before we were able to clear data at the end

@@ -1,4 +1,4 @@
-var sodium = require('sodium-universal')
+var sodium = require('sodium-native')
 var hmac = require('.')
 var test = require('tape')
 
