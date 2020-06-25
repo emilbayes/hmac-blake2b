@@ -1,5 +1,7 @@
 # `hmac-blake2b`
 
+[![Build Status](https://travis-ci.org/emilbayes/hmac-blake2b.svg?branch=master)](https://travis-ci.org/emilbayes/hmac-blake2b)
+
 > HMAC based on BLAKE2b
 
 Even though BLAKE2b is designed to also work as a MAC, specifications like
@@ -9,16 +11,17 @@ a HMAC.
 ## Usage
 
 ```js
-var sodium = require('sodium-universal')
-var hmac = require('hmac-blake2b')
+const { randombytes_buf } = require('sodium-universal/randombytes')
+const hmac = require('.')
 
-var mac = Buffer.alloc(hmac.BYTES)
-var key = Buffer.alloc(hmac.KEYBYTES)
-sodium.randombytes_buf(key)
+const mac = Buffer.alloc(hmac.BYTES)
+const key = Buffer.alloc(hmac.KEYBYTES)
+randombytes_buf(key)
 
-var data = Buffer.from('some data')
+const data = Buffer.from('some data')
 
 hmac(mac, data, key)
+
 ```
 
 ## API
