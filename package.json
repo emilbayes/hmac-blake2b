@@ -5,14 +5,18 @@
   "main": "index.js",
   "dependencies": {
     "nanoassert": "^1.1.0",
-    "sodium-native": "^3.1.1",
     "sodium-universal": "^3.0.0"
   },
   "devDependencies": {
-    "tape": "^4.8.0"
+    "browserify": "^16.5.1",
+    "standard": "^14.3.4",
+    "tape": "^5.0.1",
+    "tape-run": "^7.0.0"
   },
   "scripts": {
-    "test": "tape test.js"
+    "pretest": "standard",
+    "test": "tape test.js",
+    "posttest": "browserify test.js | tape-run"
   },
   "repository": {
     "type": "git",
