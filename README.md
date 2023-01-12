@@ -1,6 +1,6 @@
 # `hmac-blake2b`
 
-[![Build Status](https://travis-ci.org/emilbayes/hmac-blake2b.svg?branch=master)](https://travis-ci.org/emilbayes/hmac-blake2b)
+[![Build Status](https://github.com/emilbayes/hmac-blake2b/actions/workflows/npm.yml/badge.svg)](https://github.com/emilbayes/hmac-blake2b/actions/workflows/npm.yml)
 
 > HMAC based on BLAKE2b
 
