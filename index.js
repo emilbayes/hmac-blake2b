@@ -1,14 +1,14 @@
 /* eslint-disable camelcase */
-var { sodium_malloc, sodium_memzero } = require('sodium-universal/memory')
-var { crypto_generichash, crypto_generichash_batch } = require('sodium-universal/crypto_generichash')
-var assert = require('nanoassert')
+const { sodium_malloc, sodium_memzero } = require('sodium-universal/memory')
+const { crypto_generichash, crypto_generichash_batch } = require('sodium-universal/crypto_generichash')
+const assert = require('nanoassert')
 
-var HASHLEN = 64
-var BLOCKLEN = 128
-var scratch = sodium_malloc(BLOCKLEN * 3)
-var HMACKey = scratch.subarray(BLOCKLEN * 0, BLOCKLEN * 1)
-var OuterKeyPad = scratch.subarray(BLOCKLEN * 1, BLOCKLEN * 2)
-var InnerKeyPad = scratch.subarray(BLOCKLEN * 2, BLOCKLEN * 3)
+const HASHLEN = 64
+const BLOCKLEN = 128
+const scratch = sodium_malloc(BLOCKLEN * 3)
+const HMACKey = scratch.subarray(BLOCKLEN * 0, BLOCKLEN * 1)
+const OuterKeyPad = scratch.subarray(BLOCKLEN * 1, BLOCKLEN * 2)
+const InnerKeyPad = scratch.subarray(BLOCKLEN * 2, BLOCKLEN * 3)
 
 // Post-fill is done in the cases where someone caught an exception that
 // happened before we were able to clear data at the end
@@ -26,7 +26,7 @@ module.exports = function hmac (out, data, key) {
     sodium_memzero(HMACKey.subarray(key.byteLength))
   }
 
-  for (var i = 0; i < HMACKey.byteLength; i++) {
+  for (let i = 0; i < HMACKey.byteLength; i++) {
     OuterKeyPad[i] = 0x5c ^ HMACKey[i]
     InnerKeyPad[i] = 0x36 ^ HMACKey[i]
   }
